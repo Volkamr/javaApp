@@ -201,22 +201,22 @@ public class index extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_mesActionPerformed
 
-                                                            //Dias vividos
+    static int dias(int diaU, int mesU, int año){                                                                             //Dias vividos
 
-   
-   
-   
-   
+        int dia;
+        int mes;
+        int vivido;
+        int menos = diaU + (mesU*30);
 
-   
-   
-   
+        Calendar fecha = new GregorianCalendar();
+        mes = fecha.get(Calendar.MONTH);
+        dia = fecha.get(Calendar.DATE);
 
-   
+        vivido = ((((2021-año)*365) + ((mes+1)*30) + dia)) - menos;
 
-   
+       return vivido;
 
-   
+    }
     
     /**
      * @param args the command line arguments
